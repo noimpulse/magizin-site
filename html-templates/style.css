@@ -1,0 +1,273 @@
+
+:root{
+  --header-height:70px;
+  --text-color: rgb(0, 0, 0);
+}
+
+
+.dev{
+  width: 100%;
+  height: 100vh;
+  font-size: 2rem;
+  background-color: cadetblue;
+
+}
+
+
+
+
+
+
+
+
+li{
+  list-style: none;
+}
+a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+body{
+  
+ 
+
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+   flex-grow: 1;
+   /* display: flex;
+   flex-direction: column; */
+
+}
+
+html {
+  min-height: 100%; /* Look, it's not fixed anymore! */
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+
+.main-header{
+background-color: aqua;
+ display: grid;
+grid-auto-flow: column;
+justify-content: space-between;
+/* padding: 10px 4px; */
+height: var(--header-height);
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+align-items: center;
+}
+
+.header-compateble{
+  width: 100%;
+  height: var(--header-height);
+}
+.main-header .menu-icon svg{
+cursor: pointer;
+margin-left: 6px;
+}
+.main-header .menu-icon{
+    background-color: rgba(240, 248, 255, 0);
+    border: solid 0px;
+  }
+.main-header .magaz-name{
+  /* font-family:"Rubic", "Poppins"; */
+  font-size: 39px;
+}
+.main-header .user-icons{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-right: 15px;
+}
+.main-header .user-icons svg{
+  cursor: pointer;
+}
+
+/* menu */
+
+
+
+
+
+.category-menu{
+
+  /* top: 0px; */
+  width: 100%;
+  top: var(--header-height);
+  bottom: 0px;
+  background-color: rgba(250, 235, 215, 0.237);
+  flex-grow: 1;
+  position:fixed;
+  left: -100%;
+}
+
+.category-menu .title{
+  font-size: x-large;
+  margin-left: 20px;
+  padding-top: 30px;
+}
+
+.category-menu .catalog-list li{
+  margin-bottom: 20px;
+
+}
+
+.category-menu .catalog-list li a{
+  font-size: 1.2rem;
+  font-weight: 800;
+
+}
+
+.category-menu .wrapper{
+  background-color: rgb(0, 208, 255);
+  width: fit-content;
+  height: 100%;
+  padding-left: 30px;
+  padding-right: 50px;
+}
+#menu-check{
+  display: none;
+}
+#menu-check:checked ~  .menu-icon{
+  background-color: rgb(255, 24, 93);
+  border: solid 0px;
+}
+#menu-check:checked ~  .category-menu{
+left: 0px;
+}
+
+/* footer */
+footer{
+  width: 100%;
+  height: 200px;
+  background-color: blue;
+}
+
+/* product page */
+.products-container {
+  padding: 20px 40px;
+}
+
+.products-container .grid-products{
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  column-gap: 20px;
+  row-gap: 40px;
+ grid-auto-columns: 300px;
+  margin-top: 60px;
+  justify-content: space-between;
+}
+
+.products-container .product-card img{
+width: 100%;
+aspect-ratio: 14/12;
+object-fit: cover;
+}
+.products-container .product-title {
+  font-size: 2rem;
+  font-weight: 700;
+ 
+}
+
+.product-card .price{
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.product-card .title{
+  font-size: 1.4rem;
+  padding: 5px 0px;
+}
+
+.product-card .rating{
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.product-card .to-busket{
+  margin-top: 10px;
+  background-color: blue;
+  color: white;
+  padding: 6px;
+  font-size: large;
+}
+
+/* one product page */
+
+.product-gallery{
+  display: flex;
+  overflow-y: scroll;
+  gap: 20px;
+}
+
+.solo-product-container .rating{
+  font-size: large;
+  font-weight: 600;
+}
+
+.solo-product-container .price{
+  font-size: 2rem;
+}
+
+.solo-product-container>.title{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.solo-product-container .description .title{
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: rgb(39, 39, 39);
+}
+
+.solo-product-container .stats caption{
+  font-size: large;
+  margin-top: 30px;
+  font-weight: 600;
+
+}
+
+.solo-product-container .stats table{
+  table-layout: fixed;
+  width: 50%;
+  border-collapse: collapse;
+  border: 3px solid rgb(179, 175, 179);
+}
+
+.solo-product-container .stats tbody tr:nth-child(odd) {
+  background-color: #bbbbbb;
+}
+
+.solo-product-container .stats tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.solo-product-container .reviews .title{
+  font-size: 1.5rem;
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.single-comment .comment-card-header{
+  display: flex;
+}
+.single-comment .comment-card-header img{
+  /* width: ; */
+  height: 40px;
+  margin-right: 10px;
+}
+
+.comment-card-header .name{
+  font-weight: 600;
+  font-size: large;
+  margin-right: 20px;
+}
